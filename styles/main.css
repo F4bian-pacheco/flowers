@@ -129,6 +129,43 @@ body {
   -webkit-animation: blooming-leaf-left var(--fl-speed) 1.9s backwards;
           animation: blooming-leaf-left var(--fl-speed) 1.9s backwards;
 }
+
+
+.flower--4 {
+    -webkit-animation: moving-flower-4 4s linear infinite;
+            animation: moving-flower-4 4s linear infinite;
+  }
+  .flower--4 .flower__line {
+    height: 40vmin;
+    -webkit-animation-delay: 0.3s;
+            animation-delay: 0.3s;
+  }
+  .flower--4 .flower__line__leaf--1 {
+    -webkit-animation: blooming-leaf-right var(--fl-speed) 1.6s backwards;
+            animation: blooming-leaf-right var(--fl-speed) 1.6s backwards;
+  }
+  .flower--4 .flower__line__leaf--2 {
+    -webkit-animation: blooming-leaf-right var(--fl-speed) 1.4s backwards;
+            animation: blooming-leaf-right var(--fl-speed) 1.4s backwards;
+  }
+  .flower--4 .flower__line__leaf--3 {
+    -webkit-animation: blooming-leaf-left var(--fl-speed) 1.2s backwards;
+            animation: blooming-leaf-left var(--fl-speed) 1.2s backwards;
+  }
+  .flower--4 .flower__line__leaf--4 {
+    -webkit-animation: blooming-leaf-left var(--fl-speed) 1s backwards;
+            animation: blooming-leaf-left var(--fl-speed) 1s backwards;
+  }
+  .flower--4 .flower__line__leaf--5 {
+    -webkit-animation: blooming-leaf-right var(--fl-speed) 1.8s backwards;
+            animation: blooming-leaf-right var(--fl-speed) 1.8s backwards;
+  }
+  .flower--4 .flower__line__leaf--6 {
+    -webkit-animation: blooming-leaf-left var(--fl-speed) 2s backwards;
+            animation: blooming-leaf-left var(--fl-speed) 2s backwards;
+  }
+
+
 .flower__leafs {
   position: relative;
   -webkit-animation: blooming-flower 2s backwards;
@@ -145,6 +182,11 @@ body {
 .flower__leafs--3 {
   -webkit-animation-delay: 1.7s;
           animation-delay: 1.7s;
+}
+
+.flower__leafs--4{
+    -webkit-animation-delay: 1.5s;
+          animation-delay: 1.5s;
 }
 .flower__leafs::after {
   content: "";
@@ -165,7 +207,8 @@ body {
   height: 11vmin;
   border-radius: 51% 49% 47% 53%/44% 45% 55% 69%;
   background-color: #512894;
-  background-image: linear-gradient(to top, #7458c0, #7c52ee);
+  /* background-image: linear-gradient(to top, #7458c0, #7c52ee); */
+  background-image: linear-gradient(to top, #f7c02e,#f5e942);
   transform-origin: bottom center;
   opacity: 0.9;
   box-shadow: inset 0 0 2vmin rgba(255, 255, 255, 0.5);
@@ -185,7 +228,8 @@ body {
   transform-origin: bottom left;
   border-radius: 4vmin 10vmin 4vmin 4vmin;
   transform: translate(0%, 18%) rotateX(70deg) rotate(-43deg);
-  background-image: linear-gradient(to top, #6252ee, #5552ee);
+  background-image: linear-gradient(to top, #f5d742,#f5c942);
+  /* background-image: linear-gradient(to top, #6252ee, #5552ee); */
   z-index: 1;
   opacity: 0.8;
 }
@@ -1221,6 +1265,22 @@ body {
     transform: rotate(-20deg) rotateY(-10deg);
   }
 }
+@-webkit-keyframes moving-flower-4 {
+    0%, 100% {
+      transform: rotate(2deg);
+    }
+    50% {
+        transform: rotate(-2deg);
+      }
+  }
+  @keyframes moving-flower-4 {
+    0%, 100% {
+      transform: rotate(2deg);
+    }
+    50% {
+      transform: rotate(-2deg);
+    }
+  }
 @-webkit-keyframes blooming-leaf-right {
   0% {
     transform-origin: left;
